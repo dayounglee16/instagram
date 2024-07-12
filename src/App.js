@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Feed from "./components/Feed";
+import CommentList from "./components/CommentList";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppBox>
+      <Navbar />
+      <Feed />
+      <CommentList />
+    </AppBox>
   );
 }
 
 export default App;
+
+const AppBox = styled.div`
+  width: 800px;
+  height: 100%;
+  border: 1px solid #ccc;
+`;
